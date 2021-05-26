@@ -21,3 +21,7 @@ article.tags << tag
 con esto asociamos el post_id 1 con el tag_id 1
 
 
+ahora vamos amodificar la tabla intermedia ejecutamos 
+rails g migration ChangePostsTagsTable
+rails db:migrate
+

@@ -1,0 +1,8 @@
+para comenzar una app con postgresql
+rails new APP_NAME --database=postgresql
+despues correr 
+rails db:create
+rails db:migrate
+vamos hacer un tabla intermedia 
+rails g migration CreateJoinTable post tag
+rails db:migrate

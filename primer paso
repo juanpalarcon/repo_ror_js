@@ -4,7 +4,7 @@ despues correr
 rails db:create
 rails db:migrate
 rails g scaffold Tag title
-vamos hacer un tabla intermedia 
+vamos hacer un tabla intermedia (relacions intransitivas)
 rails g migration CreateJoinTable post tag
 rails db:migrate
 despues hacer las referencia
@@ -12,3 +12,12 @@ despues hacer las referencia
 pra comprobar  la asociacion en rails console
 Post.new.tags
 (esto es una asocioacion N a N)
+creamos un post en consola
+article = Post.create(title:'awesome post', content:'A short story', author: 'Jp')
+un nuevo tag
+tag = Tag.new(title:'Food')
+para hacer un asociacion 
+article.tags << tag
+con esto asociamos el post_id 1 con el tag_id 1
+
+

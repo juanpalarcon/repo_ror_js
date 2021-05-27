@@ -25,3 +25,27 @@ ahora vamos amodificar la tabla intermedia ejecutamos
 rails g migration ChangePostsTagsTable
 rails db:migrate
 
+creamos el modelo post_tag.rb para hacer las relaciones ocupamos 
+belongs_to :post
+belongs_to :tag
+en consola verificamos si estan bien la relaciones 
+Post.new.tags
+Tag.new.posts 
+si las relaciones estna bien veremos un mensaje como este :
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+
+ para borrar una relacion en consola seria:
+ p = Post.last
+ p.tags.destroy_all
+ se borra la relacion, pero siguien existiendo el tags
+
+ el has many through es mas recomendable cuando implementamos un 
+ logica de relacion con el modelo intermedio
+
+
+ para relacion post con usuario se crea la migracion 
+ rails g migration AddUserToPosts user:references
+ 
+
+
+

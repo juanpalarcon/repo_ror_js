@@ -46,6 +46,10 @@ si las relaciones estna bien veremos un mensaje como este :
  logica de relacion con el modelo intermedio
 
 
- para relacion post con usuario se crea la migracion 
+ ** para relacion post con usuario se crea la migracion **
  rails g migration AddUserToPosts user:references
+
+ agregamos controlador de post_tags
+ rails g scaffold_controller PostTags
+
 

@@ -39,13 +39,13 @@ si las relaciones estna bien veremos un mensaje como este :
  p.tags.destroy_all
  se borra la relacion, pero siguien existiendo el tags
 
+ Podemos comprobar contando la cantidad de tags
+ p.tags.count
+
  el has many through es mas recomendable cuando implementamos un 
  logica de relacion con el modelo intermedio
 
 
  para relacion post con usuario se crea la migracion 
  rails g migration AddUserToPosts user:references
- 
-
-
 

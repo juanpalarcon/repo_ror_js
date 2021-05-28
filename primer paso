@@ -53,3 +53,19 @@ si las relaciones estna bien veremos un mensaje como este :
  rails g scaffold_controller PostTags
 
 
+ agregamos devise
+
+
+ para tener distintas vistas hacemos la migracion 
+ rails g migration AddEditorToUsers editor:boolean
+ rails db:migrate
+
+ para autorizar al editor
+ en tags 
+  before_action :authorize_editor!
+y luego creamos el metodo en el aplication_controller
+no olvidar dar autorizacion al usuario por consola 
+
+
+
+
